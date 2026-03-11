@@ -1,0 +1,33 @@
+<main class="container">
+    <section class="profile-section">
+        <div class="profile-header" style="display:flex; align-items:center; gap:25px;">
+            <div class="avatar">JB</div>
+            <div class="info">
+                <h1 id="userName" contenteditable="true">Juliana Barbosa</h1>
+                <p id="userGrade" contenteditable="true">Grado: 12 A2 🍓</p>
+            </div>
+        </div>
+        <p style="font-size: 0.8rem; margin-top: 15px; opacity: 0.6;">✨ Haz clic en mi nombre para editarlo ✨</p>
+    </section>
+
+    <section class="grid">
+        <div class="feature-card">
+            <h2>🍄 Fibonacci Generator 🍄</h2>
+            <div class="simulation">
+                <label>¿Cuántos números quieres ver?</label><br>
+                <input type="number" id="fibInput" min="1" max="20" value="5" style="padding:8px; border-radius:10px; border:1px solid #ccc;">
+                <button onclick="runFibonacci()">Hacer Crecer 🌱</button>
+                <div id="fibResult" class="result-display">0, 1, 1, 2, 3</div>
+            </div>
+            
+            <div class="code-box">
+                <pre><code># Lógica en Python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        print(a)
+        a, b = b, a + b</code></pre>
+            </div>
+        </div>
+    </section>
+</main>

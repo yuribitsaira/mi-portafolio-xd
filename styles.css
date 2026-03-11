@@ -1,0 +1,133 @@
+:root {
+    --green-soft: #d4e9d7; /* Verde pastel suave */
+    --red-soft: #ffb3b3;   /* Rojo pastel / Rosado */
+    --paper-white: #fdfcf0; /* Blanco crema de papel viejo */
+    --text-brown: #5d4a4a;  /* Marrón suave para el texto (no negro) */
+    --gingham-red: #ff8a8a;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+    color: var(--text-brown);
+    /* Fondo de cuadros Gingham (Rojo y Blanco) */
+    background-color: #ffffff;
+    background-image:  linear-gradient(90deg, rgba(255, 138, 138, .15) 50%, transparent 50%),
+                       linear-gradient(rgba(255, 138, 138, .15) 50%, transparent 50%);
+    background-size: 60px 60px;
+}
+
+#particleCanvas {
+    position: fixed;
+    top: 0; left: 0; z-index: -1;
+    pointer-events: none;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Estilo de Tarjeta de Perfil (Como una Polaroid) */
+.profile-section {
+    background: var(--paper-white);
+    padding: 30px;
+    border: 12px solid white;
+    box-shadow: 8px 8px 20px rgba(0,0,0,0.1);
+    transform: rotate(-1.5deg); /* Un poco inclinada para que parezca pegada a mano */
+    border-radius: 2px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* Sticker de Conejito */
+.profile-section::before {
+    content: '🐰';
+    position: absolute;
+    top: -25px;
+    left: -20px;
+    font-size: 3rem;
+    filter: drop-shadow(2px 2px 0px white);
+}
+
+.avatar {
+    width: 100px; height: 100px;
+    background: var(--green-soft);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    border: 3px dashed white;
+}
+
+h1 { font-size: 2rem; margin: 0; color: #d64545; }
+p { margin: 5px 0; font-style: italic; }
+
+/* Grid de Ejercicios (Hojas de cuaderno) */
+.grid {
+    display: grid;
+    gap: 30px;
+}
+
+.feature-card {
+    background: var(--paper-white);
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.05);
+    border-left: 8px solid var(--green-soft);
+    position: relative;
+}
+
+/* "Washi Tape" (Cinta decorativa) */
+.feature-card::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 40%;
+    width: 100px;
+    height: 30px;
+    background: rgba(173, 216, 230, 0.5); /* Cinta azul transparente */
+    transform: rotate(2deg);
+}
+
+.simulation {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px dotted var(--red-soft);
+}
+
+.result-display {
+    background: #f1f8e9;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.code-box {
+    background: #2d2d2d;
+    color: #a5d6a7;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    margin-top: 15px;
+    border: 4px solid var(--green-soft);
+}
+
+button {
+    background: var(--red-soft);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 0 #e57373;
+}
+
+button:active { transform: translateY(3px); box-shadow: none; }
